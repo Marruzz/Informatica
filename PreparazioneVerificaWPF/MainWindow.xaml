@@ -1,0 +1,27 @@
+﻿<Window x:Class="EserciziWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EserciziWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label  Content="Inserisci un numero" Margin="10,10, 0, 0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <TextBox  x:Name="txtInserisci" Margin="10,45,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <Button  x:Name="btnInserisci" Content="Inserisci" Margin="10,85,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Click="btnInserisci_Click"/>
+        <Label  Content="Numeri inseriti" Margin="10,136,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <ListBox  x:Name="lstNumeri" Margin="10,166,0,0" Height="172" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" IsEnabled="False"/>
+        <Button  x:Name="btnMin" Content="Mostra il valore più piccolo" Margin="215,8,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160" Click="btnMin_Click"/>
+        <TextBlock x:Name="txtMin" Margin="215,47,0,0" Height="35" Width="160" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="Insersci l'indice di un numero da azzerare (es. 1,2,3 etc.)" Height="30" Margin="215,140,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="308" />
+        <TextBox x:Name="txtIndice" Margin="215,170,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115"/>
+        <Button  x:Name="btnAzzeraIndice" Content="Azzera questo indice" Margin="215,210,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="160" Click="btnAzzeraIndice_Click"/>
+        <Label Content="Mostra la percentuale dei valori sotto la media dei valori inseriti" Height="30" Margin="215,280,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="350"/>
+        <TextBlock IsEnabled="False" x:Name="txtPercentuali" Margin="215,310,0,0" Height="30" Width="170" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="btnPercentuali" Content="Mostra" Margin="215,345,0,0" Height="30" Width="170" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnPercentuali_Click"/>
+        <Label Content="Scrivi un indice da cancellare dal vettore" Height="30" Margin="500,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="225"/>
+        <TextBox x:Name="txtCancella" Margin="500,40,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220"/>
+        <Button x:Name="btnCancella" Content="Cancella" Margin="500,80,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="115" Click="btnCancella_Click"/>
+    </Grid>
+</Window>
