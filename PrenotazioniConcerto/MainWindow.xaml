@@ -1,0 +1,88 @@
+﻿<Window x:Class="prenotazioniConcerto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prenotazioniConcerto"
+        mc:Ignorable="d"
+        Title="Prenota il Concerto" Height="450" Width="800">
+    <Grid x:Name="gridPrenotazioni">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Button Click="btnClick" x:Name="Posto1" Content="1A"/>
+        <Button Click="btnClick" Grid.Column="1" x:Name="Posto2" Content="2A"/>
+        <Button Click="btnClick" Grid.Column="2" x:Name="Posto3" Content="3A"/>
+        <Button Click="btnClick" Grid.Column="3" x:Name="Posto4" Content="4A"/>
+        <Button Click="btnClick" Grid.Column="4" x:Name="Posto5" Content="5A"/>
+        <Button Click="btnClick" Grid.Column="5" x:Name="Posto6" Content="6A"/>
+        <Button Click="btnClick" Grid.Column="6" x:Name="Posto7" Content="7A"/>
+
+        <Button Grid.Row="1" x:Name="Posto8" Content="1B"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="1" x:Name="Posto9" Content="2B"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="1" x:Name="Posto10" Content="3B"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="1" x:Name="Posto11" Content="4B"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="1" x:Name="Posto12" Content="5B"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="1" x:Name="Posto13" Content="6B"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="1" x:Name="Posto14" Content="7B"/>
+
+        <Button Grid.Row="2" x:Name="Posto15" Content="1C"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="2" x:Name="Posto16" Content="2C"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="2"  x:Name="Posto17" Content="3C"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="2" x:Name="Posto18" Content="4C"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="2" x:Name="Posto19" Content="5C"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="2" x:Name="Posto20" Content="6C"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="2" x:Name="Posto21" Content="7C"/>
+
+        <Button Grid.Row="3" Click="btnClick" x:Name="Posto22" Content="1D"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="3" x:Name="Posto23" Content="2D"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="3" x:Name="Posto24" Content="3D"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="3" x:Name="Posto25" Content="4D"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="3" x:Name="Posto26" Content="5D"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="3" x:Name="Posto27" Content="6D"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="3" x:Name="Posto28" Content="7D"/>
+
+        <Button Grid.Row="4" Click="btnClick" x:Name="Posto29" Content="1E"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="4" x:Name="Posto30" Content="2E"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="4" x:Name="Posto31" Content="3E"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="4" x:Name="Posto32" Content="4E"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="4" x:Name="Posto33" Content="5E"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="4" x:Name="Posto34" Content="6E"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="4" x:Name="Posto35" Content="7E"/>
+
+        <Button Grid.Row="5" Click="btnClick" x:Name="Posto36" Content="1F"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="5" x:Name="Posto37" Content="2F"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="5" x:Name="Posto38" Content="3F"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="5" x:Name="Posto39" Content="4F"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="5" x:Name="Posto40" Content="5F"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="5" x:Name="Posto41" Content="6F"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="5" x:Name="Posto42" Content="7F"/>
+
+        <Button Grid.Row="6" Click="btnClick" x:Name="Posto43" Content="1G"/>
+        <Button Grid.Column="1" Click="btnClick" Grid.Row="6" x:Name="Posto44" Content="2G"/>
+        <Button Grid.Column="2" Click="btnClick" Grid.Row="6" x:Name="Posto45" Content="3G"/>
+        <Button Grid.Column="3" Click="btnClick" Grid.Row="6" x:Name="Posto46" Content="4G"/>
+        <Button Grid.Column="4" Click="btnClick" Grid.Row="6" x:Name="Posto47" Content="5G"/>
+        <Button Grid.Column="5" Click="btnClick" Grid.Row="6" x:Name="Posto48" Content="6G"/>
+        <Button Grid.Column="6" Click="btnClick" Grid.Row="6" x:Name="Posto49" Content="7G"/>
+        <Button Grid.Row="8" Grid.Column="3" x:Name="btnPrenota" Click="btnPrenota_Click">Prenota</Button>
+    </Grid>
+</Window>
