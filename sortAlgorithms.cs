@@ -78,7 +78,7 @@ static void insertionSort(int[] array)
             //y ottiene il valore di y - 1
             y = y - 1;
         }
-        //array[y + 1] ottiene il valore d[y + 1] = key;
+        //array[y + 1] ottiene il valore [y + 1] = key;
     }
 }
 
