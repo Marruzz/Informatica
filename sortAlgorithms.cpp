@@ -1,9 +1,6 @@
-using namespace std;
-#include <iostream>
+#include<iostream>
 
-void bubbleSort(int array[], int n);
-void insertionSort(int array[], int n);
-void selectionSort(int array[], int n);
+using namespace std;
 
 int main() {
     cout << "Si inserisca la quantità di valori da ordinare: ";
