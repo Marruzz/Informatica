@@ -10,7 +10,11 @@ public class sortAlgorithms {
             System.out.println("Inserire il valore " + (i + 1) + ": ");
             array[i] = scanner.nextInt();
         }
-        System.out.println("Si inserisca su quale algoritmo si vuole ordinare: ");
+        System.out.println("\nArray before sorting:");
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+        System.out.println("\nSi inserisca su quale algoritmo si vuole ordinare: ");
         System.out.println("1. Bubble Sort \n2. Insertion Sort \n3. Selection Sort");
         int scelta = scanner.nextInt();
         scanner.close();
@@ -28,15 +32,13 @@ public class sortAlgorithms {
                 System.out.println("Scelta non valida");
                 break;
         }
-        System.out.println("\nArray dopo l'ordinamento:");
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
         System.out.println("\nArray after sorting:");
         for (int i : array) {
             System.out.print(i + " ");
         }
     }
+
+
     static void bubbleSort(int[] array) {
         int temp;
         for (int i = 0; i < array.length; i++) {
@@ -49,6 +51,7 @@ public class sortAlgorithms {
             }
         }
     }
+
     static void insertionSort(int[] array) {
         int key, y;
         for (int i = 1; i < array.length; i++) {
@@ -61,6 +64,7 @@ public class sortAlgorithms {
             array[y + 1] = key;
         }
     }
+
     static void selectionSort(int[] array) {
         int minIndex, temp1;
         for (int i = 0; i < array.length - 1; i++) {
