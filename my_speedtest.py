@@ -11,7 +11,7 @@ def run_speedtest():
     s = speedtest.Speedtest()
     download_speed = s.download() / 1024 / 1024
     upload_speed = s.upload() / 1024 / 1024
-    result_label.config(text=f"Download: {download_speed:.2f} Mbit/s\nUpload: {upload_speed:.2f} Mbit/s")
+    result_label.config(text=f"Download: {download_speed:.2f} Mb/s\nUpload: {upload_speed:.2f} Mb/s")
     charging_label.config(text="Speedtest complete.")
 
 start_button = tk.Button(root, text="Run Speedtest", command=run_speedtest, bg='#00FFFF', fg='#000000', font=("Arial", 20), borderwidth=5, padx=20, pady=10)
