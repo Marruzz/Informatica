@@ -1,5 +1,14 @@
 ﻿using System.Runtime.CompilerServices;
 
+/*
+ * Commento semplice
+ ! Commento importante
+ ? Domanda
+ TODO: Da fare
+ //? Domanda importante Fatta
+ // Già fatto
+ @param nomeParametro descrizione
+ */
 
 Console.WriteLine("Si inserisca la quantità di valori da ordinare: ");
 int n = int.Parse(Console.ReadLine());
@@ -40,71 +49,66 @@ foreach (int i in arrayBubble)
 //metodi
 static void bubbleSort(int[] array)
 {
-    //temporanea variabile
-    int temp;
-    for (int i = 0; i < array.Length; i++)
+    int temp; //TODO: temp è la variabile temporanea
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        for (int j = 0; j < array.Length - 1; j++)
+        for (int j = 0; j < array.Length - i - 1; j++)
         {
-            //se array[j] è maggiore di array[j + 1]
             if (array[j] > array[j + 1])
             {
-                //temp ottiene il valore di array[j + 1]
-                temp = array[j + 1];
-                //array[j + 1] ottiene il valore di array[j]
-                array[j + 1] = array[j];
-                //array[j] ottiene il valore di temp
-                array[j] = temp;
+                temp = array[j]; //!temp ottiene il valore di array[j]
+                array[j] = array[j + 1]; //?array[j] ottiene il valore di array[j + 1]
+                array[j + 1] = temp; //*array[j + 1] ottiene il valore di temp
             }
         }
     }
 }
+
 
 static void insertionSort(int[] array)
 {
-    //key è la variabile temporanea
-    int key, y;
-    for (int i = 1; i < array.Length; i++)
+    for (int i = 1; i < array.length; i++)
     {
-        //key ottiene il valore di array[i]
-        key = array[i];
-        //y ottiene il valore di i - 1
-        y = i - 1;
-        //finchè y è maggiore o uguale a 0 e array[y] è maggiore di key
-        while (y >= 0 && array[y] > key)
+        int temp = array[i]; //TODO: temp è la variabile temporanea
+        int j = i - 1;  //TODO: j è un contatore
+
+        while (j >= 0 && array[j] > temp)
         {
-            //array[y + 1] ottiene il valore di array[y]
-            array[y + 1] = array[y];
-            //y ottiene il valore di y - 1
-            y = y - 1;
+            array[j + 1] = array[j]; //?array[j + 1] ottiene il valore di array[j]
+            j--; //!j viene decrementato
         }
-        //array[y + 1] ottiene il valore [y + 1] = key;
-        array[y + 1] = key;
+        array[j + 1] = temp; //*array[j + 1] ottiene il valore di temp
     }
 }
 
+
+/*
+Inizia dal primo elemento dell'array e lo considera come il minimo valore.
+Poi, attraversa il resto dell'array alla ricerca di un elemento più piccolo del minimo corrente.
+Se trova un elemento più piccolo, aggiorna il minimo.
+Dopo aver attraversato tutto l'array, scambia il minimo trovato con il primo elemento dell'array.
+Ora, il primo elemento dell'array è il più piccolo e può essere considerato ordinato.
+L'algoritmo si sposta al secondo elemento e ripete i passaggi da 1 a 4, ma ora considera solo il
+sotto-array non ordinato (cioè, esclude gli elementi già ordinati).
+Continua a ripetere il processo fino a quando tutti gli elementi dell'array non sono ordinati.
+*/
 static void selectionSort(int[] array)
 {
-    //minIndex è la variabile temporanea
-    int minIndex, temp1;
-    for (int i = 0; i < array.Length - 1; i++)
+    for (int i = 0; i < array.length - 1; i++)
     {
-        //minIndex ottiene il valore di i
-        minIndex = i;
-        for (int j = i + 1; j < array.Length; j++)
+        int min = i; //TODO: min è il minimo
+        for (int j = i + 1; j < array.length; j++)
         {
-            //se array[j] è minore di array[minIndex]
-            if (array[j] < array[minIndex])
+            if (array[min] > array[j])
             {
-                //minIndex ottiene il valore di j
-                minIndex = j;
+                min = j; //!min ottiene il valore di j
             }
         }
-        //temp1 ottiene il valore di array[i]
-        temp1 = array[i];
-        //array[i] ottiene il valore di array[minIndex]
-        array[i] = array[minIndex];
-        //array[minIndex] ottiene il valore di temp1
-        array[minIndex] = temp1;
+
+        int temp = array[i]; //TODO: temp è la variabile temporanea e assume  il valore di array[i]
+        array[i] = array[min]; //?array[i] ottiene il valore di array[min]
+        array[min] = temp; //*array[min] ottiene il valore di temp
     }
+
+}
 }
