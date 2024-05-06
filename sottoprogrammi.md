@@ -68,17 +68,55 @@ Il tipo della funzione può essere:
 - void. Si scrive **void** se il modulo **_non restituisce_** alcun valore
   <br><br>
 
-#### Esempio : calcolo del perimetro del triangolo, WPF
+## Lezione 3 - Le variabili
 
-    C#
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-        private void btnPerimetro_Click(){
-            InsDati();
+Le variabili per essere utilizzate vanno dichiarate. In C# è obbligatorio dichiararle, in Python no, per esempio.
 
+**Le variabili hanno una visibilità** (scope - mirino), che può essere:
+
+- **_Globale_**
+- **_Locale_**
+  Si può dichiarare una variabile al di fuori di qualsiasi graffa, e si dice che la si dichiara a livello **globale**. Non è consigliato.
+
+#### Variabili globali
+
+> Le variabili globali sono quelle variabili chr hanno validità sia nel programma principale, sia nei sottoprogrammi, purché non siano ridichiarate
+
+Se la variabile viene dichiarata in due spazi di visibilità diversi, si prende l'ultimo valore che assume la variabile. La variabile globale, invece, non la si può dichiarare in altri spazi. Se invece cambio il valore della variabile globale, il valore lo si cambia ovunque. <br>
+Le variabili globali espongono varie problematiche contro l'hacking perché, se si cambia il valore da una parte, lo si cambis a ovunque.
+
+#### Variabili locali
+
+> Le variabili locali sono quelle che sono dichiarate all'interno dei singoli sottoprogrammi
+
+Il metodo migliore è queloo di dichiarale il più vicino possibile al bisogno. Se serve in un if, la si dichiara lì, e se non basta, si sale solo di ul livello.
+
+### I parametri
+
+Ricordiamo come si scrive un sottoprogramma:
+
+    tipo nomeFunzione () {
+            dichiarazione delle costanti;
+            dichiarazione delle variabili;
+            istruzioni;
+            return valore;
         }
+
+Per far arrivare delle variabili ad un sottoprogramma, le si deve inserire all'interno delle parentesi. Qua sotto c'è un esempio
+
+    float CalcoloArea(float altezza, float base){
+        //queste due qua sono variabili locali
+        float area;
+        area = altezza * base;
+        return area; //il valore di output
     }
+
+    int main(int argc, char *argv[]){
+        float altezza = float.Parse(Console.ReadLine());
+        float base = float.Parse(Console.ReadLine());
+        //stiamo passando i parametri alla  funzione
+        float area = CalcoloArea(altezza, base);
+        Console.WriteLine(area);
+    }
+
+Il passaggio dei prarametri tra il chiamante e il chiamato, per valore, è un meccanismo che prevede la copia del valore degli argomenti nei paramentri
