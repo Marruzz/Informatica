@@ -8,19 +8,24 @@ board = [[' ' for _ in range(3)] for _ in range(3)]
 window = tk.Tk()
 window.title("Tris")
 
+
+current_player = 'X'
 # Crea i pulsanti per la scacchiera di gioco
 buttons = []
 for i in range(3):
     row = []
     for j in range(3):
-        button = tk.Button(window, text=' ', width=10, height=5,
-                          command=lambda r=i, c=j: make_move(r, c))
+        button = tk.Button(window, text=' ',
+                           width=10,
+                           height=5,
+                           command=lambda r=i,
+                           c=j: make_move(r, c),
+                           font=("Arial", 20),
+                           fg="blue" if current_player == 'X' else "red")
         button.grid(row=i, column=j)
         row.append(button)
     buttons.append(row)
 
-# Variabile per tenere traccia del giocatore corrente
-current_player = 'X'
 
 # Funzione per gestire il clic sul pulsante e fare una mossa
 def make_move(row, col):
