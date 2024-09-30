@@ -8,6 +8,9 @@ namespace BibliotecaConsole
 {
     class Libro
     {
-        public int  MyProperty { get; set; }
+        public string Titolo { get; set; }
+        public string Autore { get; set; }
+        public int Pagine { get; set; }
+        public decimal Prezzo { get; set; }
     }
 }
