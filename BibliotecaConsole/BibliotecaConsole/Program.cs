@@ -15,8 +15,22 @@ while (continua)
     Console.Write("Inserisci l'autore: ");
     oggettoLibro.Autore = Console.ReadLine();
 
+    //oggettoLibro.Pagine = int.Parse(Console.ReadLine());
     Console.Write("Inserisci il numero di pagine: ");
-    oggettoLibro.Pagine = int.Parse(Console.ReadLine());
+    bool c_ok = false;
+    do
+    {
+        int temp = 0;
+        if (int.TryParse(Console.ReadLine(), out temp))
+        {
+            oggettoLibro.Pagine = temp;
+            c_ok = true;
+        }
+        else
+        {
+            Console.WriteLine("Errore. Il valore non è numerico. Inserire un altro valore");
+        }
+    } while (!c_ok);
 
     Console.Write("Inserisci il prezzo: . Ricordarsi di mettere la virgola per i prezzi nno interi, se si mette il punto il programma non funziona");
     oggettoLibro.Prezzo = decimal.Parse(Console.ReadLine());
