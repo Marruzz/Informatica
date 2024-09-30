@@ -18,7 +18,7 @@ while (continua)
     Console.Write("Inserisci il numero di pagine: ");
     oggettoLibro.Pagine = int.Parse(Console.ReadLine());
 
-    Console.Write("Inserisci il prezzo: ");
+    Console.Write("Inserisci il prezzo: . Ricordarsi di mettere la virgola per i prezzi nno interi, se si mette il punto il programma non funziona");
     oggettoLibro.Prezzo = decimal.Parse(Console.ReadLine());
 
     Console.WriteLine("Si vuole inserire un altro libro? y/n");
@@ -35,7 +35,7 @@ if (leggereLibri == "si")
     foreach (var Libro in biblioteca)
     {
         Console.WriteLine("Titolo: " + Libro.Titolo);
-        Console.Write("Autore: " + Libro.Autore);
+        Console.WriteLine("Autore: " + Libro.Autore);
         Console.WriteLine("Numero di pagine: " + Libro.Pagine);
         Console.WriteLine("Prezzo: " + Libro.Prezzo);
         Console.WriteLine("\n");
