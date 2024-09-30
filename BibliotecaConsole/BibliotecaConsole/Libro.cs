@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BibliotecaConsole
 {
-    internal class Libro
+    class Libro
     {
+        public int  MyProperty { get; set; }
     }
 }
