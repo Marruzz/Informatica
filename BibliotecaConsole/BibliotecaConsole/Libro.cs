@@ -12,5 +12,12 @@ namespace BibliotecaConsole
         public string Autore { get; set; }
         public int Pagine { get; set; }
         public decimal Prezzo { get; set; }
+        private int CodiceSegreto { get; set; }
+
+        // costruttore
+        public Libro() 
+        {
+            //questo è un blocco di codice che viene eseguito alla creazione degli oggetti di questa classe
+        }
     }
 }
