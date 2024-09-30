@@ -18,6 +18,8 @@ namespace BibliotecaConsole
         public Libro() 
         {
             //questo è un blocco di codice che viene eseguito alla creazione degli oggetti di questa classe
+            CodiceSegreto = 321;
         }
+        
     }
 }
