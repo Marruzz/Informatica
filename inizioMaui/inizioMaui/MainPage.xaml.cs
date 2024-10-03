@@ -11,7 +11,7 @@ namespace inizioMaui
         {
             InitializeComponent();
             Random numero = new Random();
-            indovinaNumero = (int)numero.Next(1, 50);
+            indovinaNumero = (int)numero.Next(1, 100);
             counter = 0;
         }
 
@@ -29,7 +29,7 @@ namespace inizioMaui
                 }
                 else if (numeroIndovinato > indovinaNumero)
                 {
-                    if (numeroIndovinato > 50) { await DisplayAlert("Errore", "Il numero deve essere minore di 50", "OK, ne reinserisco un altro"); counter--; }
+                    if (numeroIndovinato > 100) { await DisplayAlert("Errore", "Il numero deve essere minore di 100", "OK, ne reinserisco un altro"); counter--; }
                     lblHint.Text = "Il numero da indovinare è più piccolo";
                 }
                 else
