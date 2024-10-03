@@ -5,10 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:inizioMaui"
     Shell.FlyoutBehavior="Disabled"
-    Title="inizioMaui">
+    Title="Tenta la Fortuna">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
